@@ -118,3 +118,8 @@ a,a:focus,a:hover{
     margin-top: 15px;
 }
 /* ---------------- */
+
+.bar-loader span {
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
