@@ -9,7 +9,11 @@ function TableBody({ items, columns }) {
                         {
                             columns.map(column => (
                                 <>
-                                <td key={column.path}>{ column.content(item, column.path) }</td>
+                                    <td 
+                                        key={column.path}
+                                    >
+                                        { column.content(item, column.path) }
+                                    </td>
                                 </>
                             ))
                         }
