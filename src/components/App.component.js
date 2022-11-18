@@ -1,12 +1,11 @@
-import { Link, Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Counter from "../view/counter";
 import NavBar from "../view/navbar";
 import Spin from "../view/spinner";
 
 import UserList from "./user-list.component";
 
-function App (props) {  
-    console.log(props);  
+function App () {
     return (
         <div>
             <BrowserRouter>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { BarLoader } from "react-spinners";
 
-function Spin() {
+function Spin({ children }) {
     let [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -20,7 +20,7 @@ function Spin() {
                     </div> 
                 : 
                 <>
-                    <h1>Hello Wolrd!</h1>
+                    {children}
                 </>
             }
         </div>
