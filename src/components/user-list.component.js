@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Spin from '../view/spinner';
 
 import Table from './common/table.component';
 
@@ -38,15 +39,19 @@ function UserList (props) {
     const filteredUsers = filterUsers();
 
     return (
-        <div>
-            <div className='col-lg-3'>
-                <input onChange={(event) => setSearchedText(event.target.value)} />
-            </div>
-            <Table 
-                items={filteredUsers}
-                columns={columns}
-            />
-        </div>
+        <>
+            <Spin>
+                <div>
+                    <div className='col-lg-3'>
+                        <input onChange={(event) => setSearchedText(event.target.value)} />
+                    </div>
+                    <Table 
+                        items={filteredUsers}
+                        columns={columns}
+                    />
+                </div>
+            </Spin>
+        </>
     );
 }
  

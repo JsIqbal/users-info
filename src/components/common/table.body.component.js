@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
-
-function TableBody({ items, columns }) {
+export default function TableBody({ items, columns }) {
     return (
-        <tbody>
+        <>
             {
                 items.map((item, index) => (
                     <tr key = { index } >
@@ -20,8 +18,6 @@ function TableBody({ items, columns }) {
                     </tr>
                 ))
             }
-        </tbody>
+        </>
     );
-}
- 
-export default TableBody;
+};
