@@ -6,9 +6,7 @@ export default function Table({ items, columns }) {
         <>
             <table className="table">
                 <TableHeader columns={columns} />
-                <tbody>
-                    <TableBody items={items} columns={columns} />
-                </tbody>
+                <TableBody items={items} columns={columns} />
             </table>
         </>
     );

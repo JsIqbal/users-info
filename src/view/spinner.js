@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { BarLoader } from "react-spinners";
 
-function Spin({ children }) {
+export default function Spin({ children }) {
     let [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -12,7 +12,7 @@ function Spin({ children }) {
     }, []);
 
     return (
-        <div>
+        <>
             {
                 loading ? 
                     <div className="col-lg-6 text-center ms-auto me-auto bar-loader">
@@ -23,8 +23,6 @@ function Spin({ children }) {
                     {children}
                 </>
             }
-        </div>
+        </>
     );
-}
-
-export default Spin;
+};

@@ -4,20 +4,44 @@ import Spin from '../view/spinner';
 
 import Table from './common/table.component';
 
-function UserList (props) { 
+export default function UserList () { 
     const [users, setUsers] = useState([]);
     const [searchedText, setSearchedText] = useState("");
 
     const columns = [ 
-        { label: "ID", path: "id", content: (item, path) => <> {item[path]} </> }, 
-        { label: "Name", path: "name", content: (item, path) => <> {item[path]} </> }, 
-        { label: "Email", path: "email", content: (item, path) => <> {item[path]} </> },
-        { label: "Company Name", path: "company.name", content: (item, path) => <> {item.company.name} </> },
-        { label: "Zip", path: 'address.zipcode', content: (item, path) => <> {item.address.zipcode} </> },
+        { 
+            label: "ID", 
+            path: "id", 
+            content: (item, path) => <> {item[path]} </> 
+        }, 
+        { 
+            label: "Name", 
+            path: "name", 
+            content: (item, path) => <> {item[path]} </> 
+        }, 
+        { 
+            label: "Email", 
+            path: "email", 
+            content: (item, path) => <> {item[path]} </> 
+        },
+        { 
+            label: "Company Name", 
+            path: "company.name", 
+            content: (item, path) => <> {item.company.name} </> 
+        },
+        { 
+            label: "Zip", 
+            path: 'address.zipcode', 
+            content: (item, path) => <> {item.address.zipcode} </> 
+        },
     ];
 
     function filterUsers () {
-        const filteredUsers = users.filter(user => user.name.toLowerCase().includes(searchedText.toLowerCase()) || user.email.toLowerCase().includes(searchedText.toLowerCase()));
+        const filteredUsers = users.filter(user => 
+            user.name.toLowerCase().includes(searchedText.toLowerCase()) 
+            || 
+            user.email.toLowerCase().includes(searchedText.toLowerCase())
+        );
         return filteredUsers;
     }
 
@@ -53,6 +77,4 @@ function UserList (props) {
             </Spin>
         </>
     );
-}
- 
-export default UserList;
+};
