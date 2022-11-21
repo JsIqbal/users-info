@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
 function Counter () {
-    const count = useSelector(state => state.counter.num);
+    const count = useSelector(state => state.counterReducer.counter.num);
     return (
         <>
             <div className="row">
