@@ -1,10 +1,15 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import Spin from '../view/spinner';
+import { useDispatch } from 'react-redux';
 
+import { getUsers } from '../redux/reducers/user-reducer';
+
+import Spin from '../view/spinner';
 import Table from './common/table.component';
 
 export default function UserList () { 
+    const dispatch = useDispatch();
+
     const [users, setUsers] = useState([]);
     const [searchedText, setSearchedText] = useState("");
 
@@ -59,7 +64,7 @@ export default function UserList () {
         }
         getUsers();
     }, []);
-
+    
     const filteredUsers = filterUsers();
 
     return (
