@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const counterSlice = createSlice({
+export const counterSlice = createSlice({
     name: "counter",
     initialState: {
         num : 10,

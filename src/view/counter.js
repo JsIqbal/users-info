@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 
 function Counter () {
-    const count = useSelector(state => state.counterReducer.counter.num);
+    const count = useSelector(state => state.counterSlice.num);
+    console.log(count);
     return (
         <>
             <div className="row">
