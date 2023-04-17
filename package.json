@@ -1,7 +1,7 @@
 {
   "name": "video_browser",
   "version": "0.1.0",
-  "homepage": "https://JsIqbal.github.io/users-info",
+  "homepage": "https://jsiqbal.github.io/users-info",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
